@@ -5,8 +5,7 @@ This app consumes the public HP API and provides a cinematic character browser w
 
 ## GitHub Repository
 
-- [https://github.com/Jonker88/101480537-lab-test2-comp3133-.git](https://github.com/Jonker88/101480537-lab-test2-comp3133-.git)
-
+- https://github.com/Jonker88/101480537-lab-test2-comp3133
 ## Features Implemented
 
 - Angular latest (module-based app)
