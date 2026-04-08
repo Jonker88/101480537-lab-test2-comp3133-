@@ -1,0 +1,32 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f6f1e8;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.84rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.chip:hover,
+.chip:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(255, 202, 99, 0.7);
+  box-shadow: 0 0 16px rgba(255, 202, 99, 0.2);
+  outline: none;
+}
+
+.chip.active {
+  background: rgba(255, 202, 99, 0.2);
+  border-color: rgba(255, 202, 99, 0.8);
+}

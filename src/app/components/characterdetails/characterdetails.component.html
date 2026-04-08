@@ -1,0 +1,37 @@
+<button class="back-btn" type="button" (click)="goBack()">← Back to Registry</button>
+
+@if (loading()) {
+  <section class="centered">
+    <mat-spinner diameter="40"></mat-spinner>
+  </section>
+} @else if (errorMessage()) {
+  <p class="error">{{ errorMessage() }}</p>
+} @else if (character(); as c) {
+  <article class="details-card {{ getHouseClass() }}" tabindex="0">
+    <div class="top-border"></div>
+
+    <section class="hero-section">
+      <img [src]="c.image || 'https://placehold.co/800x540/1a1a1a/EEE?text=No+Image'" [alt]="c.name" class="hero-image" />
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <span class="house-badge">{{ getHouseLabel() }}</span>
+        <h2>{{ c.name }}</h2>
+        <p>Actor: {{ c.actor | fallback }}</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <h3>Character Profile</h3>
+      <section class="info-grid">
+        <p><strong>Species:</strong> {{ c.species | fallback }}</p>
+        <p><strong>House:</strong> {{ c.house | fallback:'No House' }}</p>
+        <p><strong>Wizard:</strong> {{ c.wizard ? 'Yes' : 'No' }}</p>
+        <p><strong>Ancestry:</strong> {{ c.ancestry | fallback }}</p>
+        <p><strong>Wand Wood:</strong> {{ c.wand?.wood | fallback }}</p>
+        <p><strong>Wand Core:</strong> {{ c.wand?.core | fallback }}</p>
+        <p><strong>Wand Length:</strong> {{ c.wand?.length | fallback }}</p>
+        <p><strong>Actor:</strong> {{ c.actor | fallback }}</p>
+      </section>
+    </section>
+  </article>
+}

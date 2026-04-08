@@ -1,0 +1,14 @@
+<div class="chips" role="group" aria-label="House filters">
+  @for (house of houses; track house.value) {
+    <button
+      type="button"
+      class="chip"
+      [class.active]="selectedHouse === house.value"
+      (click)="onHouseChange(house.value)"
+      [attr.aria-label]="'Filter by ' + house.label"
+    >
+      <span>{{ house.icon }}</span>
+      <span>{{ house.label }}</span>
+    </button>
+  }
+</div>

@@ -1,0 +1,85 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  --accent: #ffca63;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, #070707 0%, #191919 100%);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
+  animation: slideDown 260ms ease-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.crest {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-right: 10px;
+  color: #111;
+  font: 700 0.9rem/1 "Cinzel", serif;
+  background: radial-gradient(circle at 34% 30%, #ffdc8f, #946b2d 66%);
+  box-shadow: 0 0 22px rgba(255, 202, 99, 0.45);
+}
+
+.brand {
+  font: 700 1.6rem/1.1 "Cinzel", serif;
+  letter-spacing: 0.04em;
+}
+
+.gold {
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(255, 202, 99, 0.45);
+}
+
+.toolbar-spacer {
+  flex: 1;
+}
+
+.toolbar-subtitle {
+  font-size: 0.88rem;
+  color: #c9b89a;
+}
+
+.app-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.4rem 1rem 2rem;
+  animation: fadeIn 350ms ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .toolbar-subtitle {
+    display: none;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+}

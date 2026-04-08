@@ -1,0 +1,172 @@
+:host {
+  --gryffindor: #c41e3a;
+  --slytherin: #1a472a;
+  --ravenclaw: #946b2d;
+  --hufflepuff: #ecb939;
+}
+
+.back-btn {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+  color: #efe4d3;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-1px);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.error {
+  color: #ff808e;
+}
+
+.details-card {
+  max-width: 940px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #141414;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: cardIn 260ms ease;
+}
+
+.details-card:focus-visible {
+  outline: 2px solid #ffca63;
+  outline-offset: 2px;
+}
+
+.top-border {
+  height: 4px;
+  background: var(--house-color, rgba(255, 255, 255, 0.4));
+}
+
+.hero-section {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 24%,
+    color-mix(in srgb, var(--house-color, #222) 28%, #000) 100%
+  );
+}
+
+.hero-text {
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  right: 20px;
+}
+
+.house-badge {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--house-color, #555);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-text h2 {
+  margin: 0;
+  color: #fff;
+  font: 700 2rem/1.1 "Cinzel", serif;
+}
+
+.hero-text p {
+  margin: 0.45rem 0 0;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.content {
+  padding: 1.1rem 1.3rem 1.3rem;
+}
+
+h3 {
+  margin: 0 0 0.9rem;
+  color: #f4e6d1;
+  font: 600 1.35rem/1.2 "Cinzel", serif;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 0.75rem 1.3rem;
+}
+
+p {
+  margin: 0;
+  color: #e9decf;
+}
+
+.info-grid p {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.house-gryffindor {
+  --house-color: var(--gryffindor);
+}
+.house-slytherin {
+  --house-color: var(--slytherin);
+}
+.house-ravenclaw {
+  --house-color: var(--ravenclaw);
+}
+.house-hufflepuff {
+  --house-color: var(--hufflepuff);
+}
+.house-none {
+  --house-color: #737373;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 320px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
