@@ -42,6 +42,18 @@ Shows detailed information for a selected character including species, house, wi
 
 ![Character Details Page](docs/screenshots/image.png)
 
+### 3) Sorting/Filtering by House
+
+Demonstrates the house chip filter in action (example shown with Slytherin), where character cards are dynamically narrowed to the selected house.
+
+![Sorting by House Feature](docs/screenshots/house-sorting-feature.png)
+
+### 4) Search Feature
+
+Demonstrates live search functionality (example query: `har`) that filters the visible character cards by name in real time.
+
+![Search Feature](docs/screenshots/search-feature.png)
+
 ## Run Locally
 
 ```bash
