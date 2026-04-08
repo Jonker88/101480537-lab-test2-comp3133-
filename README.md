@@ -35,13 +35,13 @@ This app consumes the public HP API and provides a cinematic character browser w
 
 Shows the main explorer view with house filter chips, search, and character cards.
 
-![Character List Page](docs/screenshots/characters-page.png)
+![Character List Page](image.png)
 
 ### 2) Character Details Page
 
 Shows detailed information for a selected character including species, house, wizard status, ancestry, wand, actor, and image.
 
-![Character Details Page](docs/screenshots/character-details-page.png)
+![Character Details Page](image.png)
 
 ## Run Locally
 
